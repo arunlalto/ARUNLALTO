@@ -1,6 +1,10 @@
 /*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 /*===== VARIABLES CSS =====*/
+*{
+  margin:0px;
+  padding:0PX;
+}
 :root{
   --header-height: 3rem;
   --font-semi: 600;
