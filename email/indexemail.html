@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+      
+        <button type="submit">Submit</button>
+      </form>
+      <script src="script.js"></script>
+
+<script>
+document.getElementById("contact-form").addEventListener("submit", function (e) {
+  e.preventDefault();
+  const formData = new FormData(e.target);
+  const data = {
+    from: "bellonetech@gmail.com", // Replace with your sender email
+    to: "arunlalto@gmail.com", // Replace with the recipient's email
+    subject: "Contact Form Submission",
+    bodyText: `Name: ${formData.get("name")}\nEmail: ${formData.get("email")}\nMessage: ${formData.get("message")}`,
+  };
+
+  // Make an API call to Elastic Email
+  axios.post("https://api.elasticemail.com/v2/email/send", data, {
+    headers: {
+      "Content-Type": "application/json",
+      "X-ElasticEmail-ApiKey": "BF85652CCC962DBBC3E84A082621BC2D9DE8",
+    },
+  })
+  .then((response) => {
+    if (response.data.success) {
+      alert("Email sent successfully!");
+      // You can redirect the user to a thank you page or reset the form here.
+    } else {
+      alert("Email sending failed. Please try again later.");
+    }
+  })
+  .catch((error) => {
+    console.error("Error sending email:", error);
+    alert("An error occurred. Please try again later.");
+  });
+});
+
+</script>
+</body>
+</html>
+  
