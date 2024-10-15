@@ -123,6 +123,12 @@ img{
   background-color: #fff;
   box-shadow: 0 1px 4px rgba(146,161,176,.15);
 }
+.btn-gp{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
 
 /*===== NAV =====*/
 .nav{
@@ -228,7 +234,7 @@ img{
   display: inline-block;
   background-color: var(--first-color);
   color: #fff;
-  padding: .75rem 2.5rem;
+  padding: .50rem 1.5rem;
   font-weight: var(--font-semi);
   border-radius: .5rem;
 }
