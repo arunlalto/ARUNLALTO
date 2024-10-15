@@ -304,19 +304,19 @@ img{
   z-index: var(--z-back);
 }
 .skills__html{
-  width: 95%;
+  width: 90%;
 }
 .skills__css{
-  width: 85%;
+  width: 80%;
 }
 .skills__js{
   width: 65%;
 }
-.skills__ux{
-  width: 65%;
+.skills__react{
+  width: 70%;
 }
 .skills__bootstrap{
-  width: 55%;
+  width: 65%;
 }
 .skills__jquery{
   width: 70%;
@@ -324,6 +324,10 @@ img{
 .skills__laravel{
   width: 45%;
 }
+.skills__nodejs{
+  width: 60%;
+}
+
 .skills__git{
   width: 65%;
 }
