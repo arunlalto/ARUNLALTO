@@ -67,6 +67,9 @@ h1,h2,p{
 }
 h3{
   margin : 20px;
+  padding-top:20px;
+  padding-bottom:20px;
+  padding-left:20px
 }
 ul{
   margin: 0;
